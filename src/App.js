@@ -7,7 +7,7 @@ import ShopPage from  './pages/shop/shop.component';
 import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-//import { useRef } from 'react';
+
 
 class App extends React.Component {
   constructor(){
@@ -33,7 +33,7 @@ class App extends React.Component {
             }
           });
 
-          console.log(this.state);
+          
         });
       }
 
