@@ -23,16 +23,14 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
 
     try {
-        await auth.signInWithEmailAndPassword(email, password);
-        this.setState({ email: '', password: '' });
-
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: '', password: '' });
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-
-    
   };
 
+  
   handleChange = event => {
     const { value, name } = event.target;
 
@@ -63,11 +61,12 @@ class SignIn extends React.Component {
             required
           />
           <div className='buttons'>
-          <CustomButton type='submit'> Sign in </CustomButton>
-          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google </CustomButton>
-      
+            <CustomButton type='submit'> Sign in </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </CustomButton>
           </div>
-           </form>
+        </form>
       </div>
     );
   }
